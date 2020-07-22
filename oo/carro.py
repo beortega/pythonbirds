@@ -95,27 +95,27 @@ O   L
 
 
 class Carro:
-    def __init__(self):
-        self.valor = 'Leste'
-        self.velocidade = +1
+    def __init__(self, direcao, motor):
+        self.direcao = direcao
+        self.motor = motor
 
     def calcular_velocidade(self):
-        return self.velocidade
+        return self.motor.velocidade
 
     def acelerar(self):
-        self.velocidade = +1
+        self.motor.acelerar()
 
     def frear(self):
-        self.velocidade = -2
+        self.motor.frear()
 
     def calcular_direcao(self):
-        return self.valor
+        return self.direcao.valor
 
     def girar_a_direita(self):
-        self.valor = 'Leste'
+        self.direcao.girar_a_direita()
 
     def girar_a_esquerda(self):
-        self.valor = 'Oeste'
+        self.direcao.girar_a_esquerda()
 
 
 class Motor:
